@@ -1,0 +1,8 @@
+build:
+  proxy:
+     image: okteto.dev/v2-proxy:latest
+     context: v2ray
+     dockerfile: Dockerfile
+deploy:
+  - name: Deploy API
+    command: kubectl apply -f v2ray/k8s
